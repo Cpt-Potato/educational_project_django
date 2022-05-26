@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class CrmStatus(models.Model):
+class Status(models.Model):
     status = models.CharField(max_length=200, verbose_name='Название статуса')
 
     def __str__(self):
@@ -16,7 +16,7 @@ class Order(models.Model):
     created_at = models.DateTimeField('Время заказа', auto_now=True)
     name = models.CharField('Имя', max_length=200)
     phone = models.CharField('Телефон', max_length=200)
-    status = models.ForeignKey(CrmStatus, on_delete=models.PROTECT, null=True, blank=True, verbose_name='Статус')
+    status = models.ForeignKey(Status, on_delete=models.PROTECT, null=True, blank=True, verbose_name='Статус')
 
     def __str__(self):
         return self.name
@@ -26,7 +26,7 @@ class Order(models.Model):
         verbose_name_plural = 'Заказы'
 
 
-class CrmComment(models.Model):
+class Comment(models.Model):
     text = models.TextField('Текст комментария')
     created_at = models.DateTimeField('Дата создания', auto_now=True)
     order = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name='Заявка')
