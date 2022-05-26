@@ -6,7 +6,7 @@ from .models import Order
 
 def index(request):
     form = OrderForm()
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'pages/index.html', {'form': form})
 
 
 def thanks_page(request):
@@ -16,4 +16,4 @@ def thanks_page(request):
         element = Order(order_name=name, order_phone=phone)
         element.save()
     else:
-        return render(request, 'thanks.html')
+        return render(request, 'pages/thanks.html')
