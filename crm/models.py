@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Status(models.Model):
-    status = models.CharField(max_length=200, verbose_name='Название статуса')
+    status = models.CharField('Название статуса', max_length=200)
 
     def __str__(self):
         return self.status
