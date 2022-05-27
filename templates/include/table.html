@@ -10,27 +10,15 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>Услуга 1 Услуга 1 Услуга 1</td>
-                <td>
-                    <del>2000</del>
-                </td>
-                <td>1000</td>
-            </tr>
-            <tr>
-                <td>Услуга 2 Услуга 2 Услуга 2</td>
-                <td>
-                    <del>2000</del>
-                </td>
-                <td>1000</td>
-            </tr>
-            <tr>
-                <td>Услуга 3 Услуга 3 Услуга 3</td>
-                <td>
-                    <del>2000</del>
-                </td>
-                <td>1000</td>
-            </tr>
+            {% for service in services %}
+                <tr>
+                    <td>{{ service.title }}</td>
+                    <td>
+                        <del>{{ service.old_price }}</del>
+                    </td>
+                    <td>{{ service.new_price }}</td>
+                </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>

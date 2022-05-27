@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'crm',
-    'cms'
+    'cms',
+    'price'
 ]
 
 MIDDLEWARE = [
