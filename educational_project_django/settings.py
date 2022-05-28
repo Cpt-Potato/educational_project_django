@@ -20,8 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Load data from .env
 load_dotenv(BASE_DIR / '.env-dev')
-TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 
+TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+CHAT_ID = os.getenv('CHAT_ID')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
