@@ -29,7 +29,7 @@ class Order(models.Model):
 class Comment(models.Model):
     text = models.TextField('Текст комментария')
     created_at = models.DateTimeField('Дата создания', auto_now=True)
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name='Заявка')
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name='Заявка от')
 
     def __str__(self):
         return self.text
