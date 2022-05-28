@@ -22,8 +22,8 @@ class Order(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Заказ'
-        verbose_name_plural = 'Заказы'
+        verbose_name = 'Заявка'
+        verbose_name_plural = 'Заявки'
 
 
 class Comment(models.Model):

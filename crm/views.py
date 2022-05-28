@@ -4,6 +4,7 @@ from cms.models import Slider
 from price.models import Card, Service
 from .forms import OrderForm
 from .models import Order
+from .telegram_bot import send_message
 
 
 def index(request):
@@ -25,6 +26,7 @@ def index(request):
 def thanks(request):
     name = request.POST.get("name")
     phone = request.POST.get("phone")
-    element = Order(order_name=name, order_phone=phone)
-    element.save()
+    order = Order(name=name, phone=phone)
+    order.save()
+    send_message(name, phone)
     return render(request, "pages/thanks.html", {'name': name})
