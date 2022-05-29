@@ -11,6 +11,6 @@ class SliderAdmin(admin.ModelAdmin):
     readonly_fields = ('get_image',)
 
     def get_image(self, obj):
-        return mark_safe(f'<img src="{obj.img.url}" width="160" height="90">')
+        return mark_safe(f'<img src="{obj.img.url}" width="128" height="72">')
 
     get_image.short_description = "Изображение"
