@@ -20,6 +20,8 @@ class OrderAdmin(admin.ModelAdmin):
     fields = ('status', 'name', 'phone', 'created_at')
     readonly_fields = ('created_at',)
     inlines = [CommentInline]
+    list_per_page = 20
+    list_max_show_all = 100
 
 
 @admin.register(Comment)
