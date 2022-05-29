@@ -1,6 +1,6 @@
 from telebot import TeleBot
 
-from educational_project_django.settings import TELEGRAM_BOT_TOKEN, CHAT_ID
+from config.settings import TELEGRAM_BOT_TOKEN, CHAT_ID
 
 bot = TeleBot(TELEGRAM_BOT_TOKEN)
 
