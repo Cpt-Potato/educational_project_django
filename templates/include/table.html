@@ -1,3 +1,5 @@
+{% load humanize %}
+
 <section>
     <div class="container">
         <h1 class="text-3">Цены на услуги</h1>
@@ -14,9 +16,9 @@
                 <tr>
                     <td>{{ service.title }}</td>
                     <td>
-                        <del>{{ service.old_price }}</del>
+                        <del>{{ service.old_price|intcomma }}</del>
                     </td>
-                    <td>{{ service.new_price }}</td>
+                    <td>{{ service.new_price|intcomma }}</td>
                 </tr>
             {% endfor %}
             </tbody>

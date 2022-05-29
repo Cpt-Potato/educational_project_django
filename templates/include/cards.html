@@ -1,3 +1,5 @@
+{% load humanize %}
+
 <section>
     <div class="container">
         <h1 class="text-3">ПАКЕТЫ УСЛУГ</h1>
@@ -6,21 +8,21 @@
                 <div class="card-body">
                     <h5 class="card-title">BRONZE</h5>
                     <p class="card-text">{{ card_1.description }}</p>
-                    <h3>{{ card_1.price }} руб.</h3>
+                    <h3>{{ card_1.price|intcomma }} руб.</h3>
                 </div>
             </div>
             <div class="card product_card" style="width: 18rem; background-color: #c0c0c0;">
                 <div class="card-body">
                     <h5 class="card-title">SILVER</h5>
                     <p class="card-text">{{ card_2.description }}</p>
-                    <h3>{{ card_2.price }} руб.</h3>
+                    <h3>{{ card_2.price|intcomma }} руб.</h3>
                 </div>
             </div>
             <div class="card product_card" style="width: 18rem; background-color: #ffd700;">
                 <div class="card-body">
                     <h5 class="card-title">GOLD</h5>
                     <p class="card-text">{{ card_3.description }}</p>
-                    <h3>{{ card_3.price }} руб.</h3>
+                    <h3>{{ card_3.price|intcomma }} руб.</h3>
                 </div>
             </div>
         </div>
