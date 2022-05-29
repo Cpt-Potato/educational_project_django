@@ -1,5 +1,5 @@
-### Django, Telebot
-<p>Одностраничный сайт</p>
+### Django, SQLite3, Telebot
+<p>Простой одностраничный сайт</p>
 <p>CRM, CMS</p>
 <p>Заявки, полученные из формы, пересылаются ботом в группу Telegram</p>
 <img src="readme_img/index.jpg" width="60%" height="60%" alt="index">
